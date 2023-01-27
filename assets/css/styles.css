@@ -508,9 +508,22 @@ width: 50px;
   transition: .4s;
 }
 
+
+
 .popular__img {
   border-radius: 1rem;
   margin-bottom: 1rem;
+  transition: .6s;
+  display: block;
+  margin: auto;  
+  cursor: crosshair;
+}
+
+
+.popular__img:hover {
+  transform: scale(1.73);
+  margin-top: 100px;
+
 }
 
 .popular__data {
@@ -1059,6 +1072,12 @@ width: 50px;
   .discover__container {
     margin-left: 0rem;
     margin-right: 0rem;
+  }
+
+  .popular__img:hover {
+    transform: scale(1.61);
+    cursor: crosshair;
+ 
   }
   
 }
