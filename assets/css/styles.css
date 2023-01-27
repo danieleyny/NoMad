@@ -1051,6 +1051,16 @@ width: 50px;
   }
 }
 
+@media screen and (max-width: 445px) {
+  .discover__card {
+    width: 257px;
+  }
+  .discover__container {
+    width: 100%;
+  }
+
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .nav__menu {
