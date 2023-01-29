@@ -76,6 +76,42 @@ let swiper = new Swiper(".discover__container", {
 
 
 
+/*=============== Filter ===============*/
+// Get all filter buttons and popular cards
+
+const filterButtons = document.querySelectorAll("#filter-btns li");
+const cards = document.querySelectorAll(".popular__card");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", e => {
+    const target = e.target;
+    const filterValue = target.dataset.target;
+    
+    filterButtons.forEach(btn => {
+      btn.classList.remove("active2");
+    });
+
+    target.classList.add("active2");
+
+    cards.forEach(card => {
+      if (filterValue === "all") {
+        card.style.display = "block";
+      } else if (card.dataset.id !== filterValue) {
+        card.style.display = "none";
+      } else {
+        card.style.display = "block";
+      }
+    });
+  });
+});
+
+/*=============== Filter End ===============*/
+
+
+
+
+
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 

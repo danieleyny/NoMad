@@ -734,6 +734,54 @@ width: 50px;
 }
 
 
+
+
+/*=============== Filter ===============*/
+
+.filter-buttons{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: -90px;
+  position: relative;
+}
+
+.filter-buttons ul{
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.filter-buttons ul li{
+  color:black;
+  font-weight: 500;
+  display: inline-block;
+  margin: 0px 8px;
+  cursor: pointer;
+  padding-bottom: 0px;
+}
+
+.filter-buttons ul li.active2{
+  color: rgb(38, 38, 59);
+  border: 2px solid var(--first-color);
+  border-radius: 25px;
+  padding: 2px 15px 2px 15px;
+
+}
+
+
+.show{
+  display:block;
+}
+.hide{
+  display:none;
+}
+
+
+
+/*=============== Filter End ===============*/
+
+
 /*=============== CONTACT ===============*/
 .contact__container {
   row-gap: 2rem;
