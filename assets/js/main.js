@@ -76,6 +76,10 @@ let swiper = new Swiper(".discover__container", {
 
 
 
+
+
+
+
 /*=============== Filter ===============*/
 // Get all filter buttons and popular cards
 

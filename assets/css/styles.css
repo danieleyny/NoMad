@@ -282,6 +282,10 @@ width: 50px;
   .nav__link span {
     display: none;
   }
+
+
+
+
 }
 
 /* Change background header */
@@ -517,13 +521,13 @@ width: 50px;
   display: block;
   margin: auto;  
   cursor: crosshair;
+  width: 180px;
 }
 
 
 .popular__img:hover {
-  transform: scale(1.73);
+  transform: scale(1.65);
   margin-top: 100px;
-
 }
 
 .popular__data {
@@ -1123,7 +1127,7 @@ width: 50px;
   }
 
   .popular__img:hover {
-    transform: scale(1.61);
+    transform: scale(1.53);
     cursor: crosshair;
  
   }
@@ -1197,6 +1201,24 @@ width: 50px;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
   }
+
+  .popular__img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    transition: .6s;
+    display: block;
+    margin: auto;  
+    cursor: crosshair;
+    width: 200px;
+  }
+  
+  
+  .popular__img:hover {
+    transform: scale(1.45);
+    margin-top: 100px;
+  }
+
+
 }
 
 
