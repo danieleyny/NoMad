@@ -1201,7 +1201,11 @@ width: 50px;
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
   }
+ 
 
+}
+
+@media screen and (max-width: 1022px) {
   .popular__img {
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -1217,10 +1221,7 @@ width: 50px;
     transform: scale(1.45);
     margin-top: 100px;
   }
-
-
 }
-
 
 
 /* For large devices */
