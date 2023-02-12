@@ -82,9 +82,8 @@ let swiper = new Swiper(".discover__container", {
 
 /*=============== Copy Text On Click ===============*/
 
-
-document.getElementById("copyText").addEventListener("click", function() {
-    var text = document.getElementById("copyText").innerText;
+function copyText(id) {
+    var text = document.getElementById(id).innerText;
     var tempInput = document.createElement("input");
     tempInput.style = "position: absolute; left: -1000px; top: -1000px";
     tempInput.value = text;
@@ -92,48 +91,30 @@ document.getElementById("copyText").addEventListener("click", function() {
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
-  });
-
-document.getElementById("copyText1").addEventListener("click", function() {
-    var text = document.getElementById("copyText1").innerText;
-    var tempInput = document.createElement("input");
-    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-  });
-
-document.getElementById("copyText2").addEventListener("click", function() {
-    var text = document.getElementById("copyText2").innerText;
-    var tempInput = document.createElement("input");
-    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-  });
-
-document.getElementById("copyText3").addEventListener("click", function() {
-    var text = document.getElementById("copyText3").innerText;
-    var tempInput = document.createElement("input");
-    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-    tempInput.value = text;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-  });
-
+    }
+    
+    document.getElementById("copyText").addEventListener("click", function() {
+    copyText("copyText");
+    });
+    
+    document.getElementById("copyText1").addEventListener("click", function() {
+    copyText("copyText1");
+    });
+    
+    document.getElementById("copyText2").addEventListener("click", function() {
+    copyText("copyText2");
+    });
+    
+    document.getElementById("copyText3").addEventListener("click", function() {
+    copyText("copyText3");
+    });
 
 
 /*=============== Open Pop Up Alert On Click  ===============*/
 
 
-  document.getElementById("copyText3").addEventListener("click", function() {
-    var text = document.getElementById("copyText3").innerText;
+function copyText(copyTextId, emailPopupId) {
+    var text = document.getElementById(copyTextId).innerText;
     var tempInput = document.createElement("input");
     tempInput.style = "position: absolute; left: -1000px; top: -1000px";
     tempInput.value = text;
@@ -142,7 +123,7 @@ document.getElementById("copyText3").addEventListener("click", function() {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
     
-    var popup = document.getElementById("email-popup");
+    var popup = document.getElementById(emailPopupId);
     popup.style.left = event.pageX + "px";
     popup.style.top = event.pageY + "px";
     popup.style.display = "block";
@@ -150,8 +131,23 @@ document.getElementById("copyText3").addEventListener("click", function() {
     setTimeout(function() {
       popup.style.display = "none";
     }, 1000);
+  }
+  
+  document.getElementById("copyText").addEventListener("click", function() {
+    copyText("copyText", "email-popup");
   });
-
+  
+  document.getElementById("copyText1").addEventListener("click", function() {
+    copyText("copyText1", "email-popup1");
+  });
+  
+  document.getElementById("copyText2").addEventListener("click", function() {
+    copyText("copyText2", "email-popup2");
+  });
+  
+  document.getElementById("copyText3").addEventListener("click", function() {
+    copyText("copyText3", "email-popup3");
+  });
 
 /*=============== Contact Section End ===============*/
 

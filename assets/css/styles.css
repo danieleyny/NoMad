@@ -84,6 +84,18 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea,
+button,
+select,
+a,
+i,
+div {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}  
+
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -283,6 +295,24 @@ width: 50px;
     display: none;
   }
 
+  .nav__link-contact {
+    color: white;
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+  }
+
+  .nav__link-contact i {
+    font-size: 1.25rem;
+  }
+
+  .nav__link-contact span {
+    display: none;
+  }
+
+
+  
+
 
 
 
@@ -466,9 +496,32 @@ width: 50px;
   box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
 }
 
-.nav__button {
-  display: none;
+
+
+.button-layouts {
+  display: inline-block;
+  background: linear-gradient(101deg,
+                hsl(228, 66%, 53%),
+                hsl(228, 66%, 47%));
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: .5rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+  transition: .3s;
+  cursor: pointer;
+  margin-left: 25%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
+.button-layouts:hover {
+  box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
+}
+
+
+
 
 /*=============== LOGOS ===============*/
 .logos__container {
@@ -480,12 +533,12 @@ width: 50px;
 
 .logos__img img {
   height: 80px;
-  opacity: .3;
+  opacity: .4;
   transition: .3s;
 }
 
 .logos__img img:hover {
-  opacity: .7;
+  opacity: .9;
 }
 
 .logos__img-small img {
@@ -855,6 +908,8 @@ width: 50px;
 
 .contact__card-description {
   font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  cursor: default;
 }
 
 .contact__card-button {
@@ -883,10 +938,11 @@ width: 50px;
     top: 0;
     left: 0;
     margin-left: -15px;
+    margin-top: 5px;
     background-color: rgb(16, 117, 189);
     color: white;
-    padding: 5px 3px 5px 3px;
-    font-size: 12px;
+    padding: 6px 4px 6px 4px;
+    font-size: 11px;
     text-align: center;
     font-weight: 500;
     border-radius: 15px;
@@ -1147,6 +1203,7 @@ width: 50px;
     cursor: crosshair;
  
   }
+
   
 }
 
@@ -1234,7 +1291,7 @@ width: 50px;
   
   
   .popular__img:hover {
-    transform: scale(1.45);
+    transform: scale(1.55);
     margin-top: 100px;
   }
 }
@@ -1262,6 +1319,7 @@ width: 50px;
   .nav__list {
     display: flex;
     column-gap: 3rem;
+    align-items: center;
   }
   .nav__link {
     color: var(--text-color-light);
@@ -1269,8 +1327,30 @@ width: 50px;
   .nav__link i {
     display: none;
   }
+  .nav__link-contact i {
+    display: none;
+  }
   .nav__button {
     display: inline-block;
+  }
+
+  .nav-button-contact {
+    display: inline-block;
+    background: linear-gradient(101deg,
+                  hsl(228, 66%, 53%),
+                  hsl(228, 66%, 47%));
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: .5rem;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .nav-button-contact:hover {
+    box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
   }
 
   .active-link {
@@ -1353,6 +1433,7 @@ width: 50px;
   .popular__data {
     padding: 0 .25rem 0 .75rem;
   }
+  
 
   .value__container,
   .contact__container {
