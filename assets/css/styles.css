@@ -479,7 +479,7 @@ width: 50px;
 }
 
 .logos__img img {
-  height: 60px;
+  height: 80px;
   opacity: .3;
   transition: .3s;
 }
@@ -876,6 +876,22 @@ width: 50px;
 .contact__card-box:hover {
   box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1);
 }
+
+
+
+.email-popup {
+    top: 0;
+    left: 0;
+    margin-left: -15px;
+    background-color: rgb(16, 117, 189);
+    color: white;
+    padding: 5px 3px 5px 3px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 15px;
+  }
+
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe {
@@ -1310,8 +1326,11 @@ width: 50px;
   }
 
   .logos__img img {
-    height: 50px;
+    height: 130px;
+
   }
+
+ 
 
   .logos__img-small img {
     height: 80px;

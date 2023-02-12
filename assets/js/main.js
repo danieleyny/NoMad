@@ -77,42 +77,83 @@ let swiper = new Swiper(".discover__container", {
 
 
 
+/*=============== Contact Section End ===============*/
 
 
+/*=============== Copy Text On Click ===============*/
 
-/*=============== Filter ===============*/
-// Get all filter buttons and popular cards
 
-const filterButtons = document.querySelectorAll("#filter-btns li");
-const cards = document.querySelectorAll(".popular__card");
-
-filterButtons.forEach(button => {
-  button.addEventListener("click", e => {
-    const target = e.target;
-    const filterValue = target.dataset.target;
-    
-    filterButtons.forEach(btn => {
-      btn.classList.remove("active2");
-    });
-
-    target.classList.add("active2");
-
-    cards.forEach(card => {
-      if (filterValue === "all") {
-        card.style.display = "block";
-      } else if (card.dataset.id !== filterValue) {
-        card.style.display = "none";
-      } else {
-        card.style.display = "block";
-      }
-    });
+document.getElementById("copyText").addEventListener("click", function() {
+    var text = document.getElementById("copyText").innerText;
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
   });
-});
 
-/*=============== Filter End ===============*/
+document.getElementById("copyText1").addEventListener("click", function() {
+    var text = document.getElementById("copyText1").innerText;
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  });
+
+document.getElementById("copyText2").addEventListener("click", function() {
+    var text = document.getElementById("copyText2").innerText;
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  });
+
+document.getElementById("copyText3").addEventListener("click", function() {
+    var text = document.getElementById("copyText3").innerText;
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  });
 
 
 
+/*=============== Open Pop Up Alert On Click  ===============*/
+
+
+  document.getElementById("copyText3").addEventListener("click", function() {
+    var text = document.getElementById("copyText3").innerText;
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    
+    var popup = document.getElementById("email-popup");
+    popup.style.left = event.pageX + "px";
+    popup.style.top = event.pageY + "px";
+    popup.style.display = "block";
+    
+    setTimeout(function() {
+      popup.style.display = "none";
+    }, 1000);
+  });
+
+
+/*=============== Contact Section End ===============*/
 
 
 
